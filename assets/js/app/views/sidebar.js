@@ -31,10 +31,6 @@ define(["backbone", "backbone.app"], function( Backbone, APP ){
 		},
 	});
 	
-	
-	
-	
-
 	// save in the global namespace
 	APP.Views.Sidebar = View;
 

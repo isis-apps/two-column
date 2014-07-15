@@ -1,45 +1,86 @@
 .index {
-	.sidebar {
-		.col-3;
+	
+	header.top {
+		background-color: @color_teal;
+		-webkit-box-shadow: 0px 0px 5px #bababa;
+		-moz-box-shadow: 0px 0px 5px #bababa;
+		box-shadow: 0px 0px 3px #bababa;
+	}
+	.main {
+		height: 100%;
+		overflow: hidden;
+		background-color: @color_bg_primary;
+		padding-top: 60px;
 	}
 	
-	.main-content {
-		.col-9;
+	.sidebar {
+		width: 25%;
+		position: fixed;
+		left: 0;
+		top: 60px;
+		bottom: 60px;
+		background-color: @color_bg_tertiary;
+		overflow-x: hidden;
+		overflow-y: scroll;
+	}
+	
+	.content {
+		width: 75%;
+		position: fixed;
+		left: 25%;
+		top: 60px;
+		bottom: 60px;
+		overflow-x: hidden;
+		overflow-y: scroll;
+	}
+	
+	footer {
+		background-color: @color_bg_secondary;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		z-index: 999;
+		height: 60px;
+	
+		h5 {
+			margin: 0;
+		}
 	}
 }
 
 @media screen and (min-width: @mq_xxl) {
-	
-}
-
-@media screen and (max-width: @mq_xl) {
-	
-}
-
-@media screen and (max-width: @mq_l) {
 
 }
 
-@media screen and (max-width: @mq_m) {
+@media screen and (min-width: @mq_l) and (max-width: @mq_xl) {
+
+}
+
+@media screen and (min-width: @mq_m) and (max-width: @mq_l) {
+
+}
+
+@media screen and (min-width: @mq_s) and (max-width: @mq_m) {
 	
 }
 
 @media screen and (max-width: @mq_s) {
-	.index {
-		.sidebar {
-			.col-12;
-		}
-		
-		.main-content {
-			.col-12;
-		}
-	}
+	
+}
+
+@media screen and (min-width: @mq_xs) and (max-width: @mq_s) {
+	
 }
 
 @media screen and (max-width: @mq_xs) {
 	
 }
 
-@media screen and (max-width: @mq_xxs) {
+@media all and (min-width: @mq_xxs) and (max-width: @mq_xs) {
 	
+}
+
+@media screen and (max-width: @mq_xxs) {
+
 }

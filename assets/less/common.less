@@ -5,11 +5,11 @@ html, body {
 }
 html {
 	font-size: 100%;
-	line-height: 150%;
+	line-height: 160%;
 }
 
 body {
-	font-size: 1em;
+	font-size: 1.2rem;
 	.sans-serif-font;
 	color: @color_txt_primary;
 	background-color: @color_bg_primary;
@@ -27,82 +27,67 @@ body.touch {
 
 .font-face('dejavusansmono', '../fonts');
 
-h1 {
-	/*margin: 1.4rem 0;*/
+h1, h2, h3, h4, h5, h6 {
 	margin: 1rem 0;
+	color: @color_teal;
+	font-weight: 500;
+}
+
+h1, h2, h3 {
+	font-weight: 500;
+}
+
+h4, h5, h6 {
+	font-weight: normal;
+}
+
+h1 {
 	
-	font-size: 2rem;
-	font-weight: 400;
 }
 
 h2 {
-	/*margin: 1.26rem 0;*/
-	margin: 1rem 0;
 	
-	font-size: 1.8rem;
-	font-weight: 400;
 }
 
 h3 {
-	/*margin: 1.12rem 0;*/
-	margin: 1rem 0;
 	
-	font-size: 1.6rem;
-	font-weight: 400;
-}
-
-h4 {
-	/*margin: .98rem 0;*/
-	margin: 1rem 0;
-	font-size: 1.4rem;
-	font-weight: normal;
-}
-
-h5 {
-	/*margin: .85rem 0;*/
-	margin: 1rem 0;
-	font-size: 1.2rem;
-	font-weight: normal;
-}
-
-h6 {
-	font-size: 1rem;
-	/*margin: .7rem 0;*/
-	margin: 1rem 0;
-	font-weight: normal;
 }
 
 p {
 	margin: .75rem 0;
 }
 
-.wrapper {
-	overflow: auto;
-	background-color: #f00;
-	
-}
-
-header, .main, footer {
+header.top, .sidebar, .content, footer {
 	padding: @padding;
-	width: 100%;
 }
 
-header {
-	background-color: @color_bg_secondary;
+header.top {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	
+	z-index: 999;
+	
+	h1 {
+		font-size: 1.6rem;
+		color: @color_txt_inverse;
+		font-weight: 500;
+		margin: 0;
+	}
 }
 
 .main {
-	background-color: @color_bg_primary;
-	overflow: auto;
-	
+
 }
 
 footer {
-	background-color: #f00;
+	
 }
 
 .container {
-	max-width: @max_width;
+	max-width: 1000px;
 	margin: 0 auto;
 }
 
@@ -117,5 +102,18 @@ i[data-icon] {
 	line-height: 2.4rem;
 }
 
-/* media queries */
-@import "media-queries.less";
+@media screen and (min-width: @mq_xxl) {
+	.container {
+		max-width: 90%;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: @mq_m) {
+	
+	.container {
+		max-width: 100%;
+		padding: 10px;
+		background-color: #f00;
+	}
+}
